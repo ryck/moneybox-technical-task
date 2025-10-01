@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "id": "savings",
+      "name": "Savings Accounts",
+      "description": "Build a rainy day fund, save for big life events, or simply start earning interest on the money you want to set aside",
+      "products": [
+        {
+          "id": "simple_saver",
+          "name": "Simple Saver",
+          "description": "Earn 2.65% AER (variable) with next-day access. Build your savings and easily access your money when it suits you with one withdrawal per month.",
+          "image": "/assets/simple_saver.svg",
+          "features": [
+            "2.65% AER (variable)",
+            "Next-day withdrawals",
+            "One withdrawal per month",
+            "No account fees",
+            "Start with as little as £1"
+          ]
+        },
+        {
+          "id": "95_day_notice",
+          "name": "95 Day Notice Savings Account",
+          "description": "Boost your savings and get 4.08% AER with a 95 Day Notice Savings Account. Earn a great rate for giving notice to withdraw.",
+          "image": "/assets/95_day_notice.svg",
+          "features": [
+            "4.08% AER (variable)",
+            "95 day notice period",
+            "No account fees",
+            "Start with as little as £1",
+            "Unlimited deposits"
+          ]
+        },
+        {
+          "id": "32_day_notice",
+          "name": "32 Day Notice Savings Account",
+          "description": "Get 3.35% AER (variable) with a 32 Day Notice Savings Account. Great for short-term saving goals with a competitive rate.",
+          "image": "/assets/32_day_notice.svg",
+          "features": [
+            "3.35% AER (variable)",
+            "32 day notice period",
+            "No account fees",
+            "Start with as little as £1",
+            "Unlimited deposits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "isas",
+      "name": "ISAs",
+      "description": "Invest tax-free with our range of ISA products. Whether you're looking for cash savings or investment growth, we have options to suit your goals",
+      "products": [
+        {
+          "id": "cash_isa",
+          "name": "Cash ISA",
+          "description": "Get 4.30% AER with our Cash ISA. Your money is protected and you won't pay tax on the interest you earn.",
+          "image": "/assets/cash_isa.svg",
+          "features": [
+            "4.30% AER (variable)",
+            "Tax-free savings",
+            "FSCS protected up to £85,000",
+            "Next day withdrawals",
+            "Up to £20,000 allowance per year"
+          ]
+        },
+        {
+          "id": "stocks_shares_isa",
+          "name": "Stocks & Shares ISA",
+          "description": "Invest in a diversified portfolio with our Stocks & Shares ISA. Your investments could grow over time, tax-free.",
+          "image": "/assets/stocks_shares_isa.svg",
+          "features": [
+            "Tax-free investment growth",
+            "Diversified portfolio",
+            "No platform fees on ISA",
+            "Start from £1",
+            "Up to £20,000 allowance per year"
+          ]
+        },
+        {
+          "id": "lifetime_isa",
+          "name": "Lifetime ISA",
+          "description": "Save for your first home or retirement with a 25% government bonus on contributions up to £1,000 per year.",
+          "image": "/assets/lifetime_isa.svg",
+          "features": [
+            "25% government bonus",
+            "Save for first home or retirement",
+            "Up to £4,000 per year",
+            "Tax-free growth",
+            "Available for ages 18-39"
+          ]
+        },
+        {
+          "id": "junior_isa",
+          "name": "Junior ISA",
+          "description": "Help secure your child's financial future with a Junior ISA. Tax-free savings that they can access at 18.",
+          "image": "/assets/junior_isa.svg",
+          "features": [
+            "Tax-free savings for children",
+            "Up to £9,000 per year",
+            "Available until age 18",
+            "Parents and child can contribute",
+            "Accessible at 18"
+          ]
+        },
+        {
+          "id": "open_access_cash_isa",
+          "name": "Open Access Cash ISA",
+          "description": "Flexible Cash ISA with instant access to your money. Perfect for emergency funds while keeping your ISA allowance.",
+          "image": "/assets/open_access_cash_isa.svg",
+          "features": [
+            "Instant access",
+            "Flexible withdrawals",
+            "No withdrawal restrictions",
+            "Tax-free interest",
+            "FSCS protected"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pensions",
+      "name": "Pensions",
+      "description": "Secure your retirement with our pension options. Benefit from tax relief and long-term investment growth",
+      "products": [
+        {
+          "id": "personal_pension",
+          "name": "Personal Pension",
+          "description": "Take control of your retirement with our Personal Pension. Benefit from tax relief and potential investment growth.",
+          "image": "/assets/personal_pension.svg",
+          "features": [
+            "Tax relief on contributions",
+            "Flexible retirement options",
+            "Investment growth potential",
+            "Annual allowance up to £60,000",
+            "Access from age 55"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investments",
+      "name": "General Investment Account",
+      "description": "Invest for the future outside of ISA and pension wrappers. Start building your investment portfolio today",
+      "products": [
+        {
+          "id": "general_investment_account",
+          "name": "General Investment Account",
+          "description": "Invest beyond your ISA allowance with our General Investment Account. No limits on how much you can invest.",
+          "image": "/assets/general_investment_account.svg",
+          "features": [
+            "No investment limits",
+            "Diversified portfolio",
+            "Professional fund management",
+            "Start from £1",
+            "Flexible withdrawals"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mortgage",
+      "name": "Mortgage",
+      "description": "This is a mortgage",
+      "products": []
+    }
+  ]
+}
