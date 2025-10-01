@@ -4,12 +4,12 @@ A Next.js application showcasing Moneybox's financial products with a business-f
 
 ## 🎯 Acceptance Criteria Met
 
-✅ **Business User Friendly**: Content managed via simple JSON file - no developer input needed
-✅ **Cross-Platform API**: REST endpoints for mobile apps and other platforms  
-✅ **Product Categories**: All Moneybox product categories displayed
-✅ **Product Details**: Complete product information with images and descriptions
-✅ **Wireframe Compliance**: Visually appealing UI matching requirements
-✅ **Comprehensive Testing**: Unit, integration, and API tests included
+- ✅ **Business User Friendly**: Content managed via simple JSON file - no developer input needed
+- ✅ **Cross-Platform API**: REST endpoints for mobile apps and other platforms
+- ✅ **Product Categories**: All Moneybox product categories displayed
+- ✅ **Product Details**: Complete product information with images and descriptions
+- ✅ **Wireframe Compliance**: Visually appealing UI matching requirements
+- ✅ **Comprehensive Testing**: Unit, integration, and API tests included
 
 ## Notes from the dev (in no particular order)
 
@@ -103,15 +103,10 @@ Access the admin panel at [http://localhost:3000/admin](http://localhost:3000/ad
 │   ├── api-endpoints.spec.ts # API e2e tests
 │   ├── main-page.spec.ts     # Homepage e2e tests
 │   └── README.md             # E2E testing documentation
-├── docs/                     # Project documentation
-│   ├── API_VALIDATION.md     # API validation documentation
-│   └── TANSTACK_QUERY.md     # TanStack Query implementation guide
 ├── public/                   # Static assets
 │   └── assets/              # Product icons and images
 ├── scripts/                  # Utility scripts
 │   └── validate-products.js # Product data validation script
-├── BUSINESS_USER_GUIDE.md    # Guide for business users
-├── IMPLEMENTATION_SUMMARY.md # Technical implementation summary
 └── Configuration files
     ├── jest.config.js        # Jest testing configuration
     ├── playwright.config.ts  # Playwright e2e configuration
@@ -212,8 +207,6 @@ Simple errors:
 
 Validation errors:
 
-````json
-Validation errors:
 ```json
 {
   "error": "Validation failed",
@@ -230,9 +223,7 @@ Validation errors:
   },
   "timestamp": "2025-10-01T22:39:07.694Z"
 }
-````
-
-````
+```
 
 **Health Check Response**
 
@@ -242,17 +233,7 @@ Validation errors:
   "version": "0.1.0",
   "timestamp": "2025-10-01T10:16:35.204Z"
 }
-````
-
-## 💼 Business User Guide
-
-See [BUSINESS_USER_GUIDE.md](./BUSINESS_USER_GUIDE.md) for detailed instructions on:
-
-- Adding new products
-- Creating new categories
-- Updating existing content
-- Managing product images
-- No technical knowledge required!
+```
 
 ## 🧪 Testing
 
@@ -328,22 +309,6 @@ The web-based admin panel (`/admin`) provides:
 - TypeScript type safety
 - Automated testing on data changes
 - Hot reloading in development
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-```bash
-npm run build
-# Deploy to Vercel
-```
-
-### Other Platforms
-
-```bash
-npm run build
-npm start
-```
 
 ## 📱 Mobile App Integration
 
