@@ -38,6 +38,7 @@ A Next.js application showcasing Moneybox's financial products with a business-f
 - Use a proper form library (like Tanstack Forms) with a better error handling
 - Document the API routes better (using OpenAPI and Swagger, for example)
 - Add some tooling for formatting / linting (like a husky hook)
+- Implement a proper database (even if it was SQLite) with a ORM (like prisma or drizzle)
 
 ## 🚀 Getting Started
 
