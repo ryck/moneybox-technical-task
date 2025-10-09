@@ -8,6 +8,33 @@ import "whatwg-fetch";
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+// Suppress console errors in tests
+const originalError = console.error;
+beforeAll(() => {
+  console.error = (...args) => {
+    if (typeof args[0] === "string") {
+      // Suppress API error logs that are expected during test mocking
+      if (
+        args[0].includes("Error saving data:") ||
+        args[0].includes("Error reading data:") ||
+        args[0].includes("Error creating category:") ||
+        args[0].includes("Error updating category:") ||
+        args[0].includes("Error deleting category:") ||
+        args[0].includes("Error creating product:") ||
+        args[0].includes("Error updating product:") ||
+        args[0].includes("Error deleting product:")
+      ) {
+        return;
+      }
+    }
+    originalError.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+
 // Mock NextResponse and NextRequest for API route testing
 jest.mock("next/server", () => ({
   NextResponse: {

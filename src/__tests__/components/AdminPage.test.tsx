@@ -1,10 +1,14 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AdminPage from "@/app/admin/page";
 
 // Mock fetch
 global.fetch = jest.fn();
 const mockFetch = fetch as jest.MockedFunction<typeof fetch>;
+
+// Setup userEvent for proper async handling
+const setupUser = () => userEvent.setup();
 
 // Test wrapper with QueryClient
 const createTestQueryClient = () =>
@@ -219,6 +223,7 @@ describe("AdminPage Form Validation", () => {
 
   describe("Category Form Validation", () => {
     it("should show validation error for invalid category ID format", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -226,7 +231,7 @@ describe("AdminPage Form Validation", () => {
       });
 
       const addCategoryButton = screen.getByText("Add Category");
-      addCategoryButton.click();
+      await user.click(addCategoryButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Category ID/)).toBeDefined();
@@ -247,6 +252,7 @@ describe("AdminPage Form Validation", () => {
     });
 
     it("should clean and validate mixed case input for category ID", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -254,7 +260,7 @@ describe("AdminPage Form Validation", () => {
       });
 
       const addCategoryButton = screen.getByText("Add Category");
-      addCategoryButton.click();
+      await user.click(addCategoryButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Category ID/)).toBeDefined();
@@ -271,6 +277,7 @@ describe("AdminPage Form Validation", () => {
     });
 
     it("should disable save button when validation error exists", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -278,7 +285,7 @@ describe("AdminPage Form Validation", () => {
       });
 
       const addCategoryButton = screen.getByText("Add Category");
-      addCategoryButton.click();
+      await user.click(addCategoryButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Category ID/)).toBeDefined();
@@ -303,6 +310,7 @@ describe("AdminPage Form Validation", () => {
 
   describe("Product Form Validation", () => {
     it("should show validation error for invalid product ID format", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -311,14 +319,14 @@ describe("AdminPage Form Validation", () => {
 
       // Click on category to expand
       const savingsCategory = screen.getByText("Savings");
-      savingsCategory.click();
+      await user.click(savingsCategory);
 
       await waitFor(() => {
         expect(screen.getByText("Add Product")).toBeDefined();
       });
 
       const addProductButton = screen.getByText("Add Product");
-      addProductButton.click();
+      await user.click(addProductButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Product ID/)).toBeDefined();
@@ -339,6 +347,7 @@ describe("AdminPage Form Validation", () => {
     });
 
     it("should clean and validate mixed case input for product ID", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -347,14 +356,14 @@ describe("AdminPage Form Validation", () => {
 
       // Click on category to expand
       const savingsCategory = screen.getByText("Savings");
-      savingsCategory.click();
+      await user.click(savingsCategory);
 
       await waitFor(() => {
         expect(screen.getByText("Add Product")).toBeDefined();
       });
 
       const addProductButton = screen.getByText("Add Product");
-      addProductButton.click();
+      await user.click(addProductButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Product ID/)).toBeDefined();
@@ -371,6 +380,7 @@ describe("AdminPage Form Validation", () => {
     });
 
     it("should disable save button when validation error exists in product form", async () => {
+      const user = setupUser();
       setupWithCategories();
 
       await waitFor(() => {
@@ -379,14 +389,14 @@ describe("AdminPage Form Validation", () => {
 
       // Click on category to expand
       const savingsCategory = screen.getByText("Savings");
-      savingsCategory.click();
+      await user.click(savingsCategory);
 
       await waitFor(() => {
         expect(screen.getByText("Add Product")).toBeDefined();
       });
 
       const addProductButton = screen.getByText("Add Product");
-      addProductButton.click();
+      await user.click(addProductButton);
 
       await waitFor(() => {
         expect(screen.getByLabelText(/Product ID/)).toBeDefined();

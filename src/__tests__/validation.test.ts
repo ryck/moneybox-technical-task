@@ -46,7 +46,7 @@ describe("API Validation", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Category ID",
+          field: "category-id",
           code: "INVALID_FORMAT",
         })
       );
@@ -64,7 +64,7 @@ describe("API Validation", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Category Name",
+          field: "category-name",
           code: "MAX_LENGTH",
         })
       );
@@ -123,7 +123,7 @@ describe("API Validation", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Product ID",
+          field: "product-id",
           code: "INVALID_FORMAT",
         })
       );
@@ -141,7 +141,7 @@ describe("API Validation", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Product Description",
+          field: "product-description",
           code: "MAX_LENGTH",
         })
       );
@@ -334,7 +334,7 @@ describe("Character Limits", () => {
     expect(result.isValid).toBe(false);
     expect(result.errors).toContainEqual(
       expect.objectContaining({
-        field: "Category ID",
+        field: "category-id",
         code: "MAX_LENGTH",
       })
     );
@@ -352,7 +352,7 @@ describe("Character Limits", () => {
     expect(result.isValid).toBe(false);
     expect(result.errors).toContainEqual(
       expect.objectContaining({
-        field: "Category Name",
+        field: "category-name",
         code: "MAX_LENGTH",
       })
     );
@@ -370,7 +370,7 @@ describe("Character Limits", () => {
     expect(result.isValid).toBe(false);
     expect(result.errors).toContainEqual(
       expect.objectContaining({
-        field: "Category Description",
+        field: "category-description",
         code: "MAX_LENGTH",
       })
     );
@@ -388,7 +388,7 @@ describe("Character Limits", () => {
     expect(result.isValid).toBe(false);
     expect(result.errors).toContainEqual(
       expect.objectContaining({
-        field: "Product Description",
+        field: "product-description",
         code: "MAX_LENGTH",
       })
     );
@@ -474,14 +474,14 @@ describe("Validation Helper Functions", () => {
 
     describe("getIdFormatError", () => {
       test("should return formatted error message with field name", () => {
-        const categoryError = validationUtils.getIdFormatError("Category ID");
+        const categoryError = validationUtils.getIdFormatError("category-id");
         expect(categoryError).toBe(
-          "Category ID can only contain lowercase letters, numbers, underscores, and dashes"
+          "category-id can only contain lowercase letters, numbers, underscores, and dashes"
         );
 
-        const productError = validationUtils.getIdFormatError("Product ID");
+        const productError = validationUtils.getIdFormatError("product-id");
         expect(productError).toBe(
-          "Product ID can only contain lowercase letters, numbers, underscores, and dashes"
+          "product-id can only contain lowercase letters, numbers, underscores, and dashes"
         );
       });
 
@@ -538,7 +538,7 @@ describe("Internal Helper Functions", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Category ID",
+          field: "category-id",
           code: "REQUIRED",
         })
       );
@@ -555,7 +555,7 @@ describe("Internal Helper Functions", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Category ID",
+          field: "category-id",
           code: "MAX_LENGTH",
         })
       );
@@ -574,7 +574,7 @@ describe("Internal Helper Functions", () => {
       expect(result.isValid).toBe(false);
       expect(result.errors).toContainEqual(
         expect.objectContaining({
-          field: "Product ID",
+          field: "product-id",
           code: "INVALID_FORMAT",
         })
       );
